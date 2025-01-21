@@ -1,3 +1,2 @@
 # S3-Website
-S3 Infotech Pvt Ltd.
 Full Documentation and Readme will update soon....
