@@ -71,16 +71,6 @@ body {
   margin: 0;
 }
 
-.s3logo {
-  max-width: 100%;
-  height: 5rem;
-  border-radius: 3px;
-}
-.s3logo1 {
-  max-width: 100%;
-  height: 5rem;
-  border-radius: 3px;
-}
 img {
   max-width: 100%;
   height: auto;
@@ -163,7 +153,7 @@ ul {
 }
 
 .section-padding {
-  padding: 100px 0;
+  padding: 70px 0;
 }
 
 a {
@@ -197,7 +187,7 @@ h6 {
 }
 
 p {
-  color: #5f5f5f;
+  color: black;
   font-size: 16px;
   font-weight: 400;
   line-height: 1.8;
@@ -352,7 +342,7 @@ p:last-child {
 .sub-title:before {
   content: "";
   position: absolute;
-  top: 6px;
+  top: 1.2rem;
   left: 0;
   width: 8px;
   height: 8px;
@@ -360,18 +350,41 @@ p:last-child {
   background-color: #d92b2a;
   box-shadow: 0px 3px 11px rgb(255, 152, 0, 0.5);
 }
-/*
-.section-title h6 {
-	color: #ff9800;
-	font-size: 16px;
-	font-weight: 700;
-	letter-spacing: 0.5px;
-	text-transform: uppercase;
+/* updated second sub title */
+.second-sub-title {
+  position: relative;
+  color: #d92b2a;
+  font-size: 16px;
+  font-weight: 700;
+  padding-left: 20px;
+  letter-spacing: 0.5px;
+  display: inline-block;
+  text-transform: uppercase;
+  margin-bottom: 15px;
 }
-*/
+
+.second-sub-title:before {
+  content: "";
+  position: absolute;
+  top: 0.5rem;
+  left: 0;
+  width: 8px;
+  height: 8px;
+  border-radius: 1px;
+  background-color: #d92b2a;
+  box-shadow: 0px 3px 11px rgb(255, 152, 0, 0.5);
+}
+
+.section-title h6 {
+  color: #d92b2a;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
 
 .section-title h2 {
-  color: #404040;
+  color: white;
   font-size: 40px;
   font-weight: 700;
   margin: 10px 0 0 0;
@@ -580,7 +593,7 @@ p:last-child {
   opacity: 0;
   visibility: hidden;
   border-radius: 3px;
-  background-color: #ff9800;
+  background-color: #d92b2a;
   -webkit-transition: 0.4s;
   transition: 0.4s;
 }
@@ -682,6 +695,7 @@ p:last-child {
   padding-right: 0;
   padding-bottom: 15px;
   background-color: transparent;
+  height: 7rem;
 }
 
 .techtrix-nav .navbar {
@@ -711,8 +725,8 @@ p:last-child {
 
 .techtrix-nav .navbar .navbar-nav .nav-item a {
   color: #ffffff;
-  font-size: 16px;
-  font-weight: 600;
+  font-size: 19px;
+  font-weight: 700;
   padding-top: 0;
   padding-left: 0;
   padding-right: 0;
@@ -1693,7 +1707,7 @@ p:last-child {
     #5b86e5,
     #36d1dc
   ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  background: url(../img/home-bg.jpg);
+  background: url(../img/new1.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -1717,7 +1731,7 @@ p:last-child {
 }
 
 .main-banner-content h5 {
-  color: #ffffff;
+  color: #4284c7;
   font-size: 16px;
   font-weight: 700;
   text-transform: uppercase;
@@ -1725,14 +1739,14 @@ p:last-child {
 }
 
 .main-banner-content h1 {
-  color: #ffffff;
-  font-size: 50px;
-  font-weight: 700;
+  color: #a9cff5;
+  font-size: 40px;
+  font-weight: 600;
   margin: 0 0 20px 0;
 }
 
 .main-banner-content p {
-  color: #ffffff;
+  color: gold;
   font-size: 17px;
   margin: 0 0 0 0;
 }
@@ -1845,6 +1859,16 @@ p:last-child {
   position: relative;
   z-index: 1;
 }
+.about-bg {
+  position: relative;
+  z-index: 1;
+  background-image: url(../img/about-background-img.jpg);
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 30rem;
+}
+
 .about-content {
   margin-right: 0px;
 }
@@ -1856,14 +1880,14 @@ p:last-child {
 }
 
 .about-content p {
-  margin-bottom: 15px;
+  margin-bottom: 12px;
 }
 
 .about-section .skills {
-  margin-top: 20px;
+  margin-top: 10px;
 }
 .about-section .skills .skill-item {
-  margin-bottom: 25px;
+  margin-bottom: 10px;
 }
 
 .about-section .skills .skill-item:last-child {
@@ -1912,6 +1936,7 @@ p:last-child {
 }
 .about-image img {
   border-radius: 5px;
+  height: 32rem;
 }
 
 /**************************************
@@ -2305,7 +2330,7 @@ p:last-child {
  ** - 10 - Overview Section CSS
  **************************************/
 .overview-content h2 {
-  color: #404040;
+  color: white;
   font-size: 38px;
   font-weight: 700;
   margin: 8px 0 15px 0;
@@ -2630,18 +2655,21 @@ p:last-child {
 
 .team-section .section-title {
   margin-bottom: 35px;
+  padding: 0px 0;
 }
 .single-team-box {
   margin-top: 30px;
   overflow: hidden;
   -webkit-transition: 0.5s;
   transition: 0.5s;
+  gap: 40px;
 }
 .team-image {
   position: relative;
   z-index: 1;
   border-radius: 3px;
   overflow: hidden;
+  height: 22rem;
 }
 
 .team-image::before {
@@ -2749,6 +2777,14 @@ p:last-child {
  **************************************/
 .portfolio-area {
   position: relative;
+  align-items: center;
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 50px 0;
+  background-color: #f8f9fa;
 }
 
 .portfolio-item {
@@ -2756,22 +2792,23 @@ p:last-child {
   display: block;
   overflow: hidden;
   border-radius: 5px;
-  margin-top: 30px;
+  margin-top: -5px;
+  padding-bottom: 3rem;
 }
 
 .portfolio-item img {
-  width: 19rem;
-  height: 17rem;
+  width: 22rem;
+  height: 20rem;
   border-radius: 4px;
 }
 
 .portfolio-item .portfolio-content-overlay {
   position: absolute;
   z-index: 2;
-  left: 10px;
-  right: 10px;
+  left: 5px;
+  right: 5px;
   bottom: -20px;
-  padding: 25px 20px;
+  padding: 10px 15px;
   opacity: 0;
   visibility: hidden;
   overflow: hidden;
@@ -2847,7 +2884,7 @@ p:last-child {
 /******************************************
  ** - 15 - Portfolio Details Page CSS
  ******************************************/
-.portfolio-details-image {
+/* .portfolio-details-image {
   margin-bottom: 30px;
 }
 
@@ -2857,7 +2894,7 @@ p:last-child {
 
 .portfolio-details-desc h3 {
   font-size: 25px;
-  margin-bottom: 13px;
+  margin-bottom: 15px;
 }
 
 .portfolio-details-desc .features-text {
@@ -2964,7 +3001,7 @@ p:last-child {
   color: #0078d4;
   background-color: #ffffff;
 }
-
+ */
 /*********************************
  ** - 16 - Hire Section CSS
  *********************************/
@@ -3045,7 +3082,7 @@ p:last-child {
 .partner-list .partner-item a {
   position: relative;
   display: block;
-  padding: 5px 20px;
+  padding: 15px 20px;
   text-align: center;
   border-radius: 10px;
   border: 2px solid #ededed;
@@ -3069,7 +3106,9 @@ p:last-child {
 }
 
 .partner-area .partner-carousel img {
-  max-width: 100%;
+  /* max-width: 100%; */
+  width: 80%;
+  height: 4rem;
   width: inherit !important;
   margin: 0 auto;
   -webkit-transition: 0.3s;
@@ -3084,9 +3123,10 @@ p:last-child {
   padding: 5px 20px;
   display: inline-block;
   border-radius: 10px;
-  background-color: white;
+  width: 10rem;
+  height: 6rem;
+  /* background-color: white; */
 }
-
 /**********************************
  ** - 18 - Blog Section CSS
  **********************************/
@@ -4013,7 +4053,7 @@ blockquote::after,
 .page-title-area {
   position: relative;
   z-index: 1;
-  background-image: url(../img/page-title-bg.jpg);
+  background-image: url(../img/portfolio/portfoliobg.jpg);
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -4417,6 +4457,12 @@ blockquote::after,
 .contact-section {
   position: relative;
   z-index: 1;
+  margin-top: 0px; /* Reduce or remove margin */
+  padding-top: 20px; /* Adjust as needed */
+}
+#contact {
+  margin-top: 0px;
+  padding-top: 20px;
 }
 
 .contact-section .section-title {
@@ -4798,7 +4844,6 @@ blockquote::after,
 .single-footer-widget .footer-info-contact span a:hover {
   color: #0078d4;
 }
-
 /********************************************
  ** - 30 - All Page Copyright Section CSS
  ********************************************/
@@ -4877,14 +4922,15 @@ blockquote::after,
 }
 #home-service {
   font-family: Arial, sans-serif;
-  background-color: #f9f9f9;
+  background-color: transparent;
   padding: 50px 0;
 }
 
 h2 {
   font-size: 2rem;
+  font-weight: 700;
   font-weight: bold;
-  color: #333;
+  color: white;
 }
 
 .g-box p {
@@ -4899,7 +4945,6 @@ h2 {
   box-shadow: 0 3px 6px rgb(0 0 0 / 16%), 0 3px 6px rgb(0 0 0 / 23%);
   padding: 10px;
   position: relative;
-  /* color: var(--text-color); */
 }
 .g-box:hover {
   transform: translateY(-5px);
@@ -4980,4 +5025,1169 @@ h2 {
     flex: 0 0 auto;
     width: 33.33333333%;
   }
+}
+.white-logo {
+  max-width: 100%;
+  height: 5rem;
+  border-radius: 3px;
+}
+.black-logo {
+  max-width: 100%;
+  height: 4rem;
+  border-radius: 3px;
+}
+.footer-logo-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.footer-logo {
+  display: inline-block;
+  margin-bottom: 25px;
+}
+
+.footer-logo img {
+  max-width: 150px;
+  height: auto;
+  margin-right: 30px;
+}
+.footer-logo img:last-child {
+  margin-right: 0;
+}
+/* satyam updates from here */
+/* ===== Contact Section ===== */
+.contact-section {
+  background: linear-gradient(135deg, #000428, #4284c7);
+  /* padding: 80px 0; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+  flex-direction: column;
+  min-height: 90vh;
+  text-align: center;
+}
+
+.contact-form {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 10px;
+  border-radius: 12px;
+  backdrop-filter: blur(15px);
+  box-shadow: 0px 8px 25px rgba(255, 255, 255, 0.2);
+  text-align: center;
+  max-width: 600px;
+  width: 100%;
+  transition: transform 0.3s ease-in-out;
+  margin: 20px auto;
+}
+
+.section-title h6 {
+  font-size: 14px;
+  font-weight: 600;
+  color: #d92b2a;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.contact-form .form-group {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.contact-form .form-group input,
+.contact-form .form-group textarea {
+  width: 100%;
+  padding: 12px 15px;
+  background: rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 8px;
+  font-size: 16px;
+  color: #fff;
+  transition: all 0.3s ease-in-out;
+  outline: none;
+}
+
+.contact-form .form-group input:focus,
+.contact-form .form-group textarea:focus {
+  border-color: #ff007f;
+  box-shadow: 0px 4px 10px rgba(255, 0, 127, 0.6);
+  transform: translateY(-2px);
+}
+
+.contact-form .form-group input::placeholder,
+.contact-form .form-group textarea::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.contact-btn .submit-btn {
+  display: inline-block;
+  width: 100%;
+  background: linear-gradient(90deg, #ff007f, #ffcc00);
+  color: #fff;
+  padding: 14px 0;
+  border: none;
+  border-radius: 10px;
+  font-size: 18px;
+  font-weight: 700;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.4s ease-in-out;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0px 5px 15px rgba(255, 0, 127, 0.5);
+}
+
+.contact-btn .submit-btn:hover {
+  background: linear-gradient(90deg, #ffcc00, #ff007f);
+  transform: scale(1.05);
+  box-shadow: 0px 10px 20px rgba(255, 0, 127, 0.7);
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.contact-form {
+  animation: fadeInUp 1s ease-in-out;
+}
+
+.partner-area {
+  position: relative;
+  z-index: 2;
+  padding-top: 50px;
+}
+
+@media (max-width: 768px) {
+  .contact-section {
+    padding: 60px 20px;
+  }
+
+  .section-title h2 {
+    font-size: 28px;
+  }
+
+  .contact-form {
+    padding: 25px;
+  }
+}
+.contact-section .section-title h2 {
+  color: white;
+}
+.default-btn-one {
+  background: linear-gradient(45deg, #ff416c, #ff4b2b);
+  color: white;
+  padding: 8px 16px;
+  font-size: 16px;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 4px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease-in-out;
+}
+/* Full-screen video section */
+.video-section {
+  position: relative;
+  width: 100%;
+  height: 100vh; /* Full viewport height */
+  overflow: hidden;
+}
+
+/* Background Video */
+.background-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures the video covers the entire section */
+  z-index: -1; /* Moves video to the background */
+}
+
+/* Overlay Content */
+.overlay-content {
+  position: relative;
+  z-index: 1;
+  color: white;
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 100px 20px;
+}
+
+.overlay-content h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.overlay-content p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+/* Call-to-Action Button */
+.cta-button {
+  display: inline-block;
+  padding: 12px 24px;
+  font-size: 18px;
+  font-weight: bold;
+  color: white;
+  background: #007bff;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background 0.3s ease;
+}
+
+.cta-button:hover {
+  background: #0056b3;
+}
+/* services customised section by satyam */
+/* Custom Services Section */
+.custom-services-section {
+  background: linear-gradient(to right, #0a1f44, #123b66);
+  padding: 80px 0;
+  color: #ffffff;
+}
+
+/* Container and Row */
+.custom-container {
+  width: 90%;
+  margin: auto;
+}
+.custom-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* Section Title */
+.custom-section-title {
+  text-align: center;
+  margin-bottom: 50px;
+}
+.custom-sub-title {
+  font-size: 16px;
+  color: #00d4ff;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+.custom-section-title h2 {
+  font-size: 36px;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+/* Service Box */
+.custom-service-box {
+  background: rgba(255, 255, 255, 0.08);
+  padding: 25px;
+  border-radius: 10px;
+  text-align: center;
+  transition: 0.3s ease-in-out;
+  margin-bottom: 30px;
+  position: relative;
+  overflow: hidden;
+  border: 2px solid transparent;
+}
+
+/* Icon Styling */
+.custom-service-icon {
+  font-size: 40px;
+  color: #00d4ff;
+  margin-bottom: 15px;
+  transition: 0.3s ease-in-out;
+}
+
+/* Hover Effects */
+.custom-service-box:hover {
+  background: rgba(255, 255, 255, 0.15);
+  transform: translateY(-5px);
+  border-color: #00d4ff;
+  box-shadow: 0 4px 20px rgba(0, 212, 255, 0.3);
+}
+.custom-service-box:hover .custom-service-icon {
+  color: #ffffff;
+}
+
+/* Headings and Paragraphs */
+.custom-service-box h3 {
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #ffffff;
+}
+.custom-service-box p {
+  font-size: 16px;
+  color: #d1e9ff;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .custom-service-box {
+    padding: 20px;
+  }
+  .custom-service-box h3 {
+    font-size: 20px;
+  }
+  .custom-service-box p {
+    font-size: 14px;
+  }
+}
+/* service md 365 section custom css by satyam */
+/* General Styles - Premium Aesthetic */
+/* body {
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(to right, #0a1f44, #163e6e);
+  margin: 0;
+  padding: 0;
+  color: #fff;
+  line-height: 1.6;
+} */
+
+/* 🔥 Stunning Background */
+body {
+  background: linear-gradient(to bottom, #0a192f, #1a1a40);
+  color: white;
+  font-family: "Poppins", sans-serif;
+}
+
+/* 🚀 Section Styling */
+.expertise_section {
+  text-align: center;
+  position: relative;
+  /* padding: 120px 20px; */
+}
+
+/* 🌈 Glowing Heading */
+.heading_wrap h1 {
+  font-size: 3.8rem;
+  font-weight: 900;
+  background: linear-gradient(to right, #00f5a0, gold);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  text-shadow: 0px 0px 20px rgba(0, 255, 180, 0.8);
+  margin-bottom: 30px;
+  animation: glowText 2s infinite alternate;
+}
+
+@keyframes glowText {
+  0% {
+    text-shadow: 0px 0px 20px rgba(0, 255, 180, 0.8);
+  }
+  100% {
+    text-shadow: 0px 0px 30px rgba(255, 0, 255, 1);
+  }
+}
+
+/* 🔷 Expertise Box - 3D Glassmorphic */
+.expertise_box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 18px;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 25px rgba(0, 255, 180, 0.25);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  text-align: center;
+  height: 100%;
+}
+
+/* 🎭 Hover Effects - Floating 3D */
+.expertise_box:hover {
+  transform: translateY(-12px) scale(1.08);
+  box-shadow: 0 16px 40px rgba(0, 255, 180, 0.5);
+  background: linear-gradient(
+    to right,
+    rgba(0, 255, 180, 0.15),
+    rgba(255, 0, 255, 0.25)
+  );
+}
+
+/* 🔵 Expertise Icon */
+.expertise_icon img {
+  max-width: 110px;
+  max-height: 110px;
+  object-fit: contain;
+  margin-bottom: 20px;
+  transition: transform 0.3s ease, filter 0.3s ease;
+  filter: drop-shadow(0px 0px 10px rgba(0, 255, 180, 0.8));
+}
+
+/* 🚀 Scale Up on Hover */
+.expertise_box:hover .expertise_icon img {
+  transform: scale(1.15);
+  filter: drop-shadow(0px 0px 20px rgba(255, 0, 255, 1));
+}
+
+/* 🎇 Expertise Title */
+.expertise_content h2 {
+  font-size: 2.2rem;
+  color: #00f5a0;
+  margin-bottom: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  transition: color 0.3s ease;
+}
+
+/* 📝 Expertise Text */
+.expertise_content p {
+  text-align: justify;
+  max-width: 90%;
+  line-height: 1.7;
+  margin: 0 auto;
+  color: white;
+}
+
+/* 🎨 Futuristic Button */
+.learn_more {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 14px 36px;
+  background: linear-gradient(to right, #ff00ff, #00f5a0);
+  color: white;
+  text-decoration: none;
+  font-weight: 800;
+  font-size: 1.2rem;
+  border-radius: 50px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 6px 18px rgba(255, 0, 255, 0.5);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+/* 🔄 Glowing Hover Effect */
+.learn_more:hover {
+  transform: scale(1.1);
+  box-shadow: 0 12px 30px rgba(0, 255, 180, 0.6);
+}
+
+/* 📱 Responsive Design */
+@media (max-width: 1024px) {
+  .heading_wrap h1 {
+    font-size: 3rem;
+  }
+  .expertise_box {
+    padding: 30px;
+  }
+}
+
+@media (max-width: 600px) {
+  .heading_wrap h1 {
+    font-size: 2.5rem;
+  }
+  .expertise_icon img {
+    max-width: 90px;
+    max-height: 90px;
+  }
+}
+/* about section css by upender */
+/* .about-image-logo img {
+  border-radius: 5px;
+  height: 8.5rem;
+  width: 25rem;
+  margin-left: 10rem;
+}
+.page-title-content p {
+  font-size: 20px;
+  color: #fff;
+}
+.about-image-ceo img {
+  border-radius: 5px;
+  height: 26rem;
+  width: 35rem;
+} */
+.signature {
+  margin-top: -1.4rem;
+  font-weight: 700;
+  margin-left: -31rem;
+}
+.about-content .signature .sig {
+  width: 8rem;
+}
+/* services background image */
+.services-bg {
+  position: relative;
+  z-index: 1;
+  background-image: url(../img/page-title-bg.jpg);
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 450px;
+}
+.contact-bg {
+  position: relative;
+  z-index: 1;
+  background-image: url(../img/contact-bgg.jpg);
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 450px;
+}
+
+.about-body-color {
+  background: linear-gradient(to bottom, white, white);
+  /* color: white;
+  font-family: "Poppins", sans-serif; */
+}
+/* swiper section in about page  by satyam*/
+/* ========================= */
+/* 💙 Stylish Light Blue Slider Section */
+/* ========================= */
+
+.slider-section {
+  background: linear-gradient(
+    135deg,
+    #a7c7e7,
+    #70a9d0
+  ); /* Light Blue to Soft Cyan */
+  padding: 60px 0;
+  text-align: center;
+  border-radius: 20px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* 🌟 Section Title */
+.section-title h2 {
+  font-size: 38px;
+  font-weight: bold;
+  text-align: center;
+  color: #ffffff; /* Pure White */
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin-bottom: 25px;
+}
+
+/* ========================= */
+/* 📸 Image Slider (Images Stay Large) */
+/* ========================= */
+
+.s3family-slider {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 95%;
+  margin: auto;
+  padding: 30px 0;
+}
+
+/* Individual Slide */
+.slider {
+  position: relative;
+  overflow: hidden;
+  border-radius: 20px;
+  box-shadow: 0 8px 25px rgba(0, 191, 255, 0.2);
+  width: 520px; /* Image Size Stays Same */
+  height: 360px; /* Image Size Stays Same */
+  margin: 15px;
+  transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
+}
+
+/* 📷 Image Styling */
+.slider img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+  transition: transform 0.5s ease-in-out, filter 0.5s ease-in-out;
+}
+
+/* 🔥 Hover Effect */
+.slider:hover {
+  transform: scale(1.05);
+  box-shadow: 0 12px 30px rgba(0, 191, 255, 0.3);
+}
+
+.slider:hover img {
+  transform: scale(1.08);
+  filter: brightness(1.1);
+}
+
+/* ========================= */
+/* 🎯 Owl Carousel Controls (Same Design) */
+/* ========================= */
+
+.owl-theme .owl-nav [class*="owl-"] {
+  background: rgba(0, 191, 255, 0.8);
+  color: #0a192f;
+  padding: 14px 22px;
+  border-radius: 50%;
+  font-size: 24px;
+  transition: 0.3s ease-in-out;
+  box-shadow: 0 6px 20px rgba(0, 191, 255, 0.4);
+}
+
+.owl-theme .owl-nav [class*="owl-"]:hover {
+  background: #00bfff;
+  color: #000;
+  transform: scale(1.2);
+}
+
+.owl-theme .owl-dots .owl-dot span {
+  width: 14px;
+  height: 14px;
+  background: rgba(255, 255, 255, 0.6);
+  margin: 6px;
+  border-radius: 50%;
+  transition: all 0.3s ease-in-out;
+}
+
+.owl-theme .owl-dots .owl-dot.active span {
+  background: #70a9d0;
+  transform: scale(1.4);
+}
+
+/* ========================= */
+/* 💡 Separator Line Between Sections */
+/* ========================= */
+
+.section-separator {
+  margin: 40px auto;
+  width: 90%;
+  height: 2px;
+  background: linear-gradient(
+    90deg,
+    #a7c7e7,
+    #70a9d0
+  ); /* Light Blue to Soft Cyan Gradient */
+  border-radius: 5px;
+}
+/* ========================= */
+/* 💼 Message from CEO Section */
+/* ========================= */
+
+.about-section {
+  background-color: #f7fafc; /* Light Gray Background for Clean Look */
+  padding-top: 50px;
+  padding-bottom: 30px;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* CEO Image */
+.about-image-ceo img {
+  width: 100%;
+  height: auto;
+  max-width: 480px;
+  border-radius: 15px;
+  box-shadow: 0 8px 25px rgba(0, 191, 255, 0.3);
+  transition: transform 0.4s ease-in-out;
+}
+
+.about-image-ceo img:hover {
+  transform: scale(1.1);
+}
+
+/* ========================= */
+/* CEO Message Title Styling */
+/* ========================= */
+.section-title h2 {
+  font-size: 32px;
+  font-weight: 700;
+  color: white; /* Dark Gray for Title */
+  margin-bottom: 10px;
+  letter-spacing: 1px;
+}
+
+.section-title h3 {
+  font-size: 24px;
+  color: #1a73e8; /* LinkedIn Blue */
+  margin-bottom: 20px;
+}
+
+.social-color-3 {
+  color: #1a73e8;
+  font-size: 22px;
+  margin-left: 10px;
+  transition: 0.3s ease-in-out;
+}
+
+.social-color-3:hover {
+  color: #004c8c; /* Darker LinkedIn Blue */
+}
+
+/* ========================= */
+/* CEO Message Content Styling */
+/* ========================= */
+/* .about-content p {
+  font-size: 18px;
+  color: #585858; 
+  line-height: 1.6;
+  margin-bottom: 15px;
+} */
+
+.signature img {
+  width: 150px;
+  height: auto;
+  margin-top: 30px;
+  border-radius: 10px;
+  box-shadow: 0 6px 15px rgba(0, 191, 255, 0.2);
+  transition: transform 0.3s ease-in-out;
+}
+
+.signature img:hover {
+  transform: scale(1.1);
+}
+
+/* ========================= */
+/* Responsive Design Adjustments */
+/* ========================= */
+@media (max-width: 768px) {
+  .about-section {
+    padding-top: 30px;
+    padding-bottom: 20px;
+  }
+
+  .about-image-ceo img {
+    max-width: 100%;
+  }
+
+  .section-title h2 {
+    font-size: 28px;
+  }
+
+  .section-title h3 {
+    font-size: 20px;
+  }
+
+  .about-content p {
+    font-size: 16px;
+  }
+}
+/* erp-in-red section css by satyam */
+/* ========================= */
+/* 💼 Enhanced Our Services Section with Larger Image */
+/* ========================= */
+
+#erp-services {
+  background-color: whitesmoke; /* Gradient Background from Light Blue to Soft Cyan */
+  padding: 120px 0; /* Increased Top and Bottom Padding */
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  border-radius: 20px;
+  margin-bottom: 40px; /* Added space at the bottom to separate from the next section */
+}
+
+/* ========================= */
+/* Section Title Styling */
+/* ========================= */
+
+#erp-services .section-title {
+  background-color: whitesmoke;
+  margin-bottom: 50px;
+}
+
+#erp-services .section-title .sub-title {
+  font-size: 28px;
+  font-weight: 700;
+  color: #ffffff; /* Pure White for Contrast */
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Light Shadow for Title */
+}
+
+/* ========================= */
+/* ERP Logo Styling (Center Icon) */
+/* ========================= */
+
+.center-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 10;
+  animation: fadeIn 1s ease-out;
+}
+
+/* ERP Logo Image - Significantly Increased Size */
+.center-icon img {
+  max-width: 100%; /* Further increased max width */
+  height: auto;
+  max-height: 700px; /* Larger height to make image bigger */
+  border-radius: 20px;
+  box-shadow: 0 20px 60px rgba(0, 81, 159, 0.25); /* Larger soft blue shadow */
+  transition: transform 0.5s ease-in-out, box-shadow 0.5s ease-in-out;
+  filter: brightness(1) contrast(1.2); /* Slight contrast boost */
+  /* margin-bottom: 1rem; */
+}
+
+/* Hover Effect on ERP Logo */
+.center-icon img:hover {
+  transform: scale(1.1); /* Slight zoom effect */
+  box-shadow: 0 30px 70px rgba(0, 81, 159, 0.35); /* Stronger shadow on hover */
+  filter: brightness(1.2) contrast(1.5); /* Increase brightness and contrast on hover */
+}
+
+/* ========================= */
+/* Animation on Load - Fade In Effect */
+/* ========================= */
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ========================= */
+/* Responsive Design Adjustments */
+/* ========================= */
+
+@media (max-width: 768px) {
+  #erp-services {
+    padding: 80px 0; /* Adjust padding for smaller screens */
+  }
+
+  .center-icon img {
+    max-width: 90%; /* Keep the logo large */
+    max-height: 350px; /* Slightly reduce size for mobile */
+  }
+
+  #erp-services .section-title .sub-title {
+    font-size: 24px; /* Adjust title font size on smaller screens */
+  }
+}
+/* about section css by satyam */
+/* ========================= */
+/* 🔥 Enhanced "Microsoft Connection" Section */
+/* ========================= */
+
+.about-section {
+  background-color: #f4f8fd; /* Light background for a clean, professional look */
+  padding-top: 80px;
+  padding-bottom: 80px;
+  border-radius: 15px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+/* Section Sub-Title Styling */
+.section-title .sub-title {
+  font-size: 28px; /* Larger size for emphasis */
+  font-weight: 600;
+  color: #003366; /* Deep blue color for professionalism */
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  margin-bottom: 18px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Soft shadow effect */
+}
+
+/* ========================= */
+/* Layout Styling for Image and Content */
+/* ========================= */
+
+.about-image-logo img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1); /* Soft shadow for image */
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* Hover effect for the Microsoft logo */
+.about-image-logo img:hover {
+  transform: scale(1.05); /* Slight zoom on hover */
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15); /* Stronger shadow */
+}
+
+/* ========================= */
+/* Content Styling */
+/* ========================= */
+
+.about-content p {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #333333; /* Dark text for readability */
+  font-weight: 400;
+  text-align: justify;
+  margin-top: 20px;
+  letter-spacing: 0.5px;
+}
+
+.about-content p strong {
+  color: #003366; /* Make key terms stand out with dark blue */
+  font-weight: 600;
+}
+
+/* ========================= */
+/* Responsive Design Adjustments */
+/* ========================= */
+
+@media (max-width: 768px) {
+  /* Adjust padding for smaller screens */
+  .about-section {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
+  /* Stack the columns vertically */
+  .row.align-items-center {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  /* Adjust image size on mobile */
+  .about-image-logo img {
+    max-width: 80%; /* Slightly smaller for mobile */
+  }
+
+  /* Adjust content text on mobile */
+  .about-content p {
+    font-size: 16px;
+  }
+}
+/* progress bar in about section */
+/* Skills Section */
+.skills {
+  margin-top: 30px;
+}
+
+.skill-item {
+  margin-bottom: 20px;
+}
+
+.skill-item h6 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #003366;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.skill-item em {
+  font-size: 16px;
+  color: #777;
+}
+
+.skill-progress {
+  position: relative;
+  background-color: #e0e0e0; /* Light gray background for the progress bar */
+  border-radius: 8px;
+  height: 8px;
+  width: 100%;
+}
+
+.progres {
+  background-color: #003366; /* Dark blue color for the progress bar */
+  height: 100%;
+  border-radius: 8px;
+  width: 0%; /* The width will be dynamically updated via JS */
+  transition: width 1s ease-in-out;
+}
+/* portfolio background color */
+.background-color-of-portfolio {
+  background: linear-gradient(to bottom, white, white);
+}
+.portfolio-img img {
+  border-radius: 5px;
+  height: 25rem;
+  width: 35rem;
+}
+/* Glassmorphism Container Styling for Portfolio Images */
+.portfolio-img {
+  position: relative;
+  overflow: hidden;
+  border-radius: 15px; /* More rounded corners */
+  background: rgba(255, 255, 255, 0.1); /* Semi-transparent background */
+  backdrop-filter: blur(15px); /* Frosted glass effect */
+  -webkit-backdrop-filter: blur(15px); /* For Safari compatibility */
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2); /* Softer shadow for a floating effect */
+  margin-bottom: 30px; /* Space between images */
+  transition: transform 0.3s ease, box-shadow 0.3s ease,
+    backdrop-filter 0.3s ease; /* Smooth transitions */
+  width: 90%;
+  max-width: 400px;
+  margin: 0 auto;
+  height: auto;
+}
+
+/* Image Styling */
+.portfolio-img img {
+  width: 100%; /* Full container width */
+  height: auto; /* Maintain aspect ratio */
+  transition: transform 0.3s ease, filter 0.3s ease; /* Smooth zoom and filter effects */
+  border-radius: 10px; /* Rounded corners on image */
+}
+
+/* Hover Effect for Image Containers */
+.portfolio-img:hover {
+  transform: translateY(-15px); /* Lift effect */
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3); /* Deeper shadow on hover */
+  backdrop-filter: blur(25px); /* Stronger blur for the glass effect */
+}
+
+/* Hover Effect for Images */
+.portfolio-img:hover img {
+  transform: scale(1.1); /* Image zoom on hover */
+  filter: brightness(1.2); /* Brighten image on hover */
+}
+
+/* Add a subtle border on hover */
+.portfolio-img:hover {
+  border: 1px solid rgba(255, 255, 255, 0.3); /* Subtle light border */
+}
+
+/* Responsive Design for Smaller Screens */
+@media (max-width: 768px) {
+  .portfolio-img {
+    margin-bottom: 20px; /* Reduced space for smaller screens */
+    border-radius: 12px; /* Slightly less rounded corners on mobile */
+  }
+
+  .portfolio-img img {
+    object-fit: cover; /* Ensure the image covers the space properly */
+    border-radius: 10px; /* Maintain rounded corners */
+  }
+}
+
+/* Specific Image Container Adjustments (if needed) */
+.portfolio-img img {
+  border-radius: 15px; /* Rounded corners for the image */
+}
+
+/* Add a transition effect for the overall container */
+.portfolio-img {
+  transition: transform 0.3s ease, box-shadow 0.3s ease,
+    backdrop-filter 0.3s ease;
+}
+/* contact page address section css */
+/* Contact Section */
+.contact-info-section {
+  background: #f9f9f9;
+  padding: 80px 0;
+  text-align: center;
+}
+
+/* Section Titles */
+.section-title h6 {
+  color: #d92b2a;
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.section-title h2 {
+  color: #4284c7;
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 50px;
+}
+
+/* Contact Card Styling */
+.contact-card {
+  background: white;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.4s ease-in-out;
+  text-align: center;
+  min-height: 280px; /* Ensures all boxes are equal height */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Hover Effects */
+.contact-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  background: linear-gradient(135deg, #4284c7, #d92b2a);
+  color: white;
+}
+
+.contact-card:hover .contact-link {
+  color: white;
+}
+
+.contact-card:hover .location-icon {
+  color: #fff;
+}
+
+/* Location Icon */
+.location-icon {
+  font-size: 36px;
+  color: #d92b2a;
+  margin-bottom: 15px;
+  transition: color 0.3s;
+}
+
+/* Contact Details */
+.contact-card h5 {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.contact-card p {
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 20px;
+  transition: color 0.3s;
+}
+
+/* Contact Links */
+.contact-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  font-weight: 600;
+  color: #4284c7;
+  text-decoration: none;
+  margin-bottom: 8px;
+  transition: color 0.3s;
+}
+
+.contact-link i {
+  margin-right: 8px;
+}
+
+.contact-link:hover {
+  color: #d92b2a;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .contact-card {
+    min-height: auto;
+    padding: 30px;
+  }
+}
+.white-background {
+  background-color: white;
+}
+#erp-services {
+  margin-top: 0;
+  flex-shrink: 0; /* Prevent the section from shrinking */
+}
+.about-section .section-title h2 {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }

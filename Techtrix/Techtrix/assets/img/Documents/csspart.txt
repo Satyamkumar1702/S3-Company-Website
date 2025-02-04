@@ -1,0 +1,24 @@
+/* Ensure navbar text is dark on a white background */
+
+.navbar {
+    background-color: white;
+    /* White background for the navbar */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    /* Add a subtle shadow for better contrast */
+}
+
+.nav-link {
+    color: #000;
+    /* Dark text for links */
+    font-weight: bold;
+    /* Bold text for all menu items */
+    font-size: 16px;
+    /* Adjust font size (optional) */
+    transition: color 0.3s ease;
+    /* Smooth hover effect */
+}
+
+.nav-link:hover {
+    color: #007bff;
+    /* Blue text on hover */
+}
