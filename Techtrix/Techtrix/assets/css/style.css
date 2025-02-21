@@ -1942,6 +1942,9 @@ p:last-child {
 /**************************************
  ** - 06 - Services Section CSS
  **************************************/
+.services-section {
+  background: linear-gradient(to bottom, #0a192f, #1a1a40);
+}
 .services-section .section-title {
   margin-bottom: 35px;
 }
@@ -2651,6 +2654,7 @@ p:last-child {
  ** - 13 - Team Section CSS
  **************************************/
 .team-section {
+  background: linear-gradient(to bottom, #0a192f, #1a1a40);
 }
 
 .team-section .section-title {
@@ -3130,102 +3134,127 @@ p:last-child {
 /**********************************
  ** - 18 - Blog Section CSS
  **********************************/
+/* Blog Section Styling */
+.blog-section {
+  padding: 80px 0;
+  background-color: #f9f9f9;
+}
+
 .blog-item {
-  position: relative;
-  border-radius: 3px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   overflow: hidden;
-  margin-bottom: 30px;
-  background-color: #ffffff;
-  -webkit-box-shadow: -1px 5px 20px 0px rgb(82, 90, 101, 0.1);
-  box-shadow: -1px 5px 20px 0px rgb(82, 90, 101, 0.1);
-  -webkit-transition: 0.4s;
-  transition: 0.4s;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
-.blog-item .single-blog-item {
-  border-top: none;
-  padding: 25px 25px;
+.blog-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
 }
 
-.blog-item .single-blog-item .blog-list {
-  padding-left: 0;
-  margin-bottom: 0;
-  -webkit-transition: 0.4s;
-  transition: 0.4s;
+/* Blog Image */
+.blog-image {
+  width: 100%;
+  height: 200px; /* Fixed height for consistency */
+  overflow: hidden;
 }
 
-.blog-item .single-blog-item .blog-list li {
-  color: #0078d4;
-  font-size: 15px;
-  font-weight: 600;
-  display: inline-block;
-  list-style-type: none;
-  margin-right: 10px;
+.blog-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease-in-out;
 }
 
-.blog-item .single-blog-item .blog-list li:last-child {
-  margin-right: 0;
+.blog-item:hover .blog-image img {
+  transform: scale(1.05);
 }
 
-.blog-item .single-blog-item .blog-list li i {
-  color: #0078d4;
-  position: relative;
-  top: 0px;
-  margin-right: 3px;
+/* Blog Content */
+.single-blog-item {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
 }
 
-.blog-item .single-blog-item .blog-list li i::before {
-  font-size: 15px;
+.blog-list {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 10px;
+  display: flex;
+  gap: 15px;
+  font-size: 14px;
+  color: #666;
 }
 
-.blog-item .single-blog-item .blog-list a {
-  color: #555;
-  text-decoration: none;
+.blog-list i {
+  color: #007bff;
+  margin-right: 5px;
 }
 
-.blog-item .single-blog-item .blog-content {
-  -webkit-transition: 0.4s;
-  transition: 0.4s;
-}
-
-.blog-item .single-blog-item .blog-content h3 {
-  color: #404040;
+.blog-content h3 {
   font-size: 20px;
-  font-weight: 600;
-  line-height: 32px;
-  margin: 15px 0px 15px 0;
-  -webkit-transition: 0.4s;
-  transition: 0.4s;
+  font-weight: bold;
+  margin-bottom: 10px;
 }
 
-.blog-item .single-blog-item .blog-content h3:hover {
-  color: #0078d4;
-  -webkit-transition: 0.6s;
-  transition: 0.6s;
-  -webkit-transition: 0.5s;
+.blog-content h3 a {
+  color: #222;
   text-decoration: none;
+  transition: color 0.3s ease-in-out;
 }
 
-.blog-item .single-blog-item .blog-content p {
-  color: #5f5f5f;
-  font-size: 16px;
-  margin: 0;
+.blog-content h3 a:hover {
+  color: #007bff;
 }
 
-.blog-item .single-blog-item .blog-content a {
-  text-decoration: none;
+/* Blog Description */
+.blog-content p {
+  font-size: 14px;
+  color: #444;
+  line-height: 1.6;
+  flex-grow: 1;
 }
 
-.blog-item .single-blog-item .blog-content .blog-btn {
+/* Read More Button */
+.blog-btn {
   margin-top: 15px;
 }
 
-.blog-item:hover .single-blog-item {
-  border-top: none;
+.read-more {
+  font-size: 14px;
+  font-weight: bold;
+  color: #007bff;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  transition: color 0.3s ease-in-out;
 }
 
-.blog-item:hover .blog-content h3 {
-  color: #0078d4;
+.read-more i {
+  font-size: 18px;
+  margin-left: 5px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.read-more:hover {
+  color: #0056b3;
+}
+
+.read-more:hover i {
+  transform: translateX(3px);
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+  .blog-item {
+    margin-bottom: 30px;
+  }
 }
 
 /************************************************
@@ -5354,24 +5383,25 @@ h2 {
 } */
 
 /* 🔥 Stunning Background */
-body {
+/* .index-body {
   background: linear-gradient(to bottom, #0a192f, #1a1a40);
   color: white;
   font-family: "Poppins", sans-serif;
-}
+} */
 
 /* 🚀 Section Styling */
 .expertise_section {
   text-align: center;
   position: relative;
   /* padding: 120px 20px; */
+  background: linear-gradient(to bottom, #0a192f, #1a1a40);
 }
 
 /* 🌈 Glowing Heading */
 .heading_wrap h1 {
   font-size: 3.8rem;
   font-weight: 900;
-  background: linear-gradient(to right, #00f5a0, gold);
+  background: linear-gradient(to right, #00f5a0, #00d4ff);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   text-transform: uppercase;
@@ -5383,10 +5413,10 @@ body {
 
 @keyframes glowText {
   0% {
-    text-shadow: 0px 0px 20px rgba(0, 255, 180, 0.8);
+    text-shadow: 0px 0px 20px #0a192f(0, 255, 180, 0.8);
   }
   100% {
-    text-shadow: 0px 0px 30px rgba(255, 0, 255, 1);
+    text-shadow: 0px 0px 30px #00d4ff(255, 0, 255, 1);
   }
 }
 
@@ -5437,7 +5467,7 @@ body {
 /* 🎇 Expertise Title */
 .expertise_content h2 {
   font-size: 2.2rem;
-  color: #00f5a0;
+  color: #00d4ff;
   margin-bottom: 12px;
   font-weight: 700;
   text-transform: uppercase;
@@ -5497,21 +5527,12 @@ body {
   }
 }
 /* about section css by upender */
-/* .about-image-logo img {
+.about-image-logo img {
   border-radius: 5px;
   height: 8.5rem;
   width: 25rem;
-  margin-left: 10rem;
+  margin-left: -100px;
 }
-.page-title-content p {
-  font-size: 20px;
-  color: #fff;
-}
-.about-image-ceo img {
-  border-radius: 5px;
-  height: 26rem;
-  width: 35rem;
-} */
 .signature {
   margin-top: -1.4rem;
   font-weight: 700;
@@ -5550,18 +5571,6 @@ body {
 /* 💙 Stylish Light Blue Slider Section */
 /* ========================= */
 
-.slider-section {
-  background: linear-gradient(
-    135deg,
-    #a7c7e7,
-    #70a9d0
-  ); /* Light Blue to Soft Cyan */
-  padding: 60px 0;
-  text-align: center;
-  border-radius: 20px;
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
-}
-
 /* 🌟 Section Title */
 .section-title h2 {
   font-size: 38px;
@@ -5581,7 +5590,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  max-width: 95%;
+  max-width: 100%;
   margin: auto;
   padding: 30px 0;
 }
@@ -5594,8 +5603,9 @@ body {
   box-shadow: 0 8px 25px rgba(0, 191, 255, 0.2);
   width: 520px; /* Image Size Stays Same */
   height: 360px; /* Image Size Stays Same */
-  margin: 15px;
+  margin: 20px;
   transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
+  /* padding-right: 0; */
 }
 
 /* 📷 Image Styling */
@@ -6103,12 +6113,13 @@ body {
 /* Contact Card Styling */
 .contact-card {
   background: white;
-  padding: 40px;
+  padding: 30px;
   border-radius: 12px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
   transition: all 0.4s ease-in-out;
   text-align: center;
-  min-height: 280px; /* Ensures all boxes are equal height */
+  height: 25rem;
+  /* min-height: 280px; Ensures all boxes are equal height */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -6172,6 +6183,9 @@ body {
 .contact-link:hover {
   color: #d92b2a;
 }
+.contact-card:hover p {
+  color: white;
+}
 
 /* Responsive Design */
 @media (max-width: 768px) {
@@ -6190,4 +6204,644 @@ body {
 .about-section .section-title h2 {
   margin-top: 1rem;
   margin-bottom: 1rem;
+}
+/* career page by satyam */
+.career-bg {
+  position: relative;
+  z-index: 1;
+  background-image: url(../img/Custom_img/banner.png);
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 30rem;
+}
+.career-background {
+  background: linear-gradient(to bottom, white, white);
+}
+/* General Styling */
+/* body {
+  font-family: "Arial", sans-serif;
+  background-color: white;
+  margin: 0;
+  padding: 0;
+  color: #333;
+} */
+
+/* Hero Section */
+.career-header {
+  text-align: center;
+  padding: 60px;
+  background: linear-gradient(135deg, #ff6f61, #4285f4);
+  color: white;
+}
+
+.career-header h1 {
+  font-size: 50px;
+}
+
+.career-header p {
+  font-size: 20px;
+}
+
+/* Job Listings */
+/* General Styling */
+body {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
+/* Job Listings Section */
+.job-listings {
+  max-width: 900px;
+  margin: 50px auto;
+  padding: 20px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.job-listings h2 {
+  text-align: center;
+  color: #333;
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.job {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #ffffff;
+  padding: 20px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  transition: 0.3s ease-in-out;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.job:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.job-content h3 {
+  font-size: 1.5rem;
+  color: #222;
+}
+
+.job-content p {
+  font-size: 1rem;
+  color: #666;
+}
+
+.apply-btn {
+  background: linear-gradient(45deg, #ff416c, #ff4b2b);
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+
+.apply-btn:hover {
+  background: linear-gradient(45deg, #ff4b2b, #ff416c);
+  transform: scale(1.05);
+}
+
+/* Dark Overlay to Focus on the Form */
+#form-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 1000;
+}
+
+/* Form Popup Styling */
+.form-popup {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 40%;
+  max-width: 500px;
+  background: #fff; /* Solid White Background */
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+  z-index: 1001;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+/* Form Container */
+.form-container h2 {
+  text-align: center;
+  color: #333;
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+}
+
+/* Input Fields */
+.form-container input,
+.form-container select,
+.form-container textarea {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background: #f9f9f9;
+  color: #333;
+  font-size: 1rem;
+  transition: 0.3s;
+}
+
+.form-container input:focus,
+.form-container textarea:focus {
+  border-color: #ff4b2b;
+  outline: none;
+  box-shadow: 0 0 8px rgba(255, 75, 43, 0.3);
+}
+
+/* Placeholder Styling */
+.form-container input::placeholder,
+.form-container textarea::placeholder {
+  color: #999;
+}
+
+/* Upload Resume Styling */
+.form-container input[type="file"] {
+  border: none;
+  padding: 8px;
+  background: #fff;
+}
+
+/* Submit Button */
+.submit-btn {
+  width: 100%;
+  background: linear-gradient(45deg, #ff416c, #ff4b2b);
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+
+.submit-btn:hover {
+  background: linear-gradient(45deg, #ff4b2b, #ff416c);
+  transform: scale(1.05);
+}
+
+/* Close Button */
+.close-btn {
+  width: 100%;
+  background: #ccc;
+  color: #333;
+  border: none;
+  padding: 10px;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background 0.3s;
+}
+
+.close-btn:hover {
+  background: #bbb;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .form-popup {
+    width: 90%;
+  }
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -55%);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+}
+
+/* blog page by satyam */
+.blog-bg {
+  position: relative;
+  z-index: 1;
+  background-image: url(../img/blog/blog15.png);
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 30rem;
+}
+/* Developers */
+.developer-credit {
+  text-align: center;
+  font-size: 12px;
+  color: #bbb;
+  margin-top: 20px;
+}
+
+.developer-credit a {
+  color: #bbb;
+  text-decoration: none;
+}
+
+.developer-credit a:hover {
+  color: #4284c7;
+  text-decoration: underline;
+}
+/* career page form asterisk */
+/* Style for asterisk */
+.required {
+  color: red;
+  font-weight: bold;
+}
+
+/* Disable submit button by default */
+.submit-btn:disabled {
+  background-color: grey;
+  cursor: not-allowed;
+}
+#google_translate_element {
+  position: fixed;
+  top: 5px;
+  right: 10px;
+  z-index: 1000;
+}
+/* portfolio topic separator line */
+/* Separator Styling */
+.separator {
+  width: 95%; /* Even longer for better section division */
+  height: 1px; /* Slightly thinner for a sharp, elegant look */
+  background: linear-gradient(
+    to right,
+    #4a90e2,
+    rgba(255, 255, 255, 0.1),
+    #4a90e2
+  );
+  margin: 50px auto; /* Spacing between sections */
+  border-radius: 3px; /* Smooth, rounded edges */
+  position: relative;
+}
+
+/* Adding a soft, professional glow effect */
+.separator::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  background: rgba(74, 144, 226, 0.3);
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  filter: blur(3px); /* Soft glow */
+  z-index: -1;
+}
+.slider-section {
+  background: linear-gradient(to bottom, #0a192f, #1a1a40);
+}
+/* css for response after submitting contact us form by satyam */
+.success-alert {
+  display: none;
+  background-color: #28a745; /* Green */
+  color: white;
+  padding: 12px;
+  margin-top: 15px;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 16px;
+  font-weight: bold;
+  transition: opacity 0.5s ease-in-out;
+}
+/* home wriiten heading css by satyam */
+@keyframes glowText {
+  0% {
+    text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.6);
+  }
+  100% {
+    text-shadow: 0px 0px 20px rgba(255, 255, 255, 1);
+  }
+}
+
+@keyframes goldGlow {
+  0% {
+    text-shadow: 0 0 10px rgba(255, 215, 0, 0.6);
+  }
+  50% {
+    text-shadow: 0 0 20px rgba(255, 215, 0, 1);
+  }
+  100% {
+    text-shadow: 0 0 10px rgba(255, 215, 0, 0.6);
+  }
+}
+
+@keyframes goldShine {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes gradientMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes shine {
+  0% {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.6);
+  }
+  50% {
+    text-shadow: 0 0 30px rgba(255, 255, 255, 1);
+  }
+  100% {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.6);
+  }
+}
+
+@keyframes scaleGlow {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.stunning-heading {
+  font-size: 3rem;
+  font-weight: bold;
+  text-align: center;
+  background: linear-gradient(
+    90deg,
+    #00aaff,
+    #0077cc,
+    #0055aa,
+    #0077cc,
+    #00aaff
+  );
+  background-size: 300% 300%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+  padding: 10px 20px;
+  animation: gradientMove 4s infinite linear, shine 2s infinite ease-in-out,
+    scaleGlow 3s infinite alternate;
+}
+@keyframes gradientMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes glow {
+  0% {
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.4),
+      0 0 15px rgba(173, 216, 230, 0.6);
+  }
+  50% {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.7),
+      0 0 20px rgba(173, 216, 230, 0.8);
+  }
+  100% {
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.4),
+      0 0 15px rgba(173, 216, 230, 0.6);
+  }
+}
+
+.shining-heading {
+  font-size: 3.2rem;
+  font-weight: bold;
+  background: linear-gradient(
+    90deg,
+    #1e3a8a,
+    #3b82f6,
+    #60a5fa,
+    #93c5fd,
+    #e0e0e0
+  );
+  background-size: 300% 300%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradientMove 6s infinite linear;
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  line-height: 1.3; /* Keeps both lines aligned evenly */
+  width: 100%;
+}
+#google_translate_container {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #fff;
+  padding: 8px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  z-index: 9999;
+}
+
+.goog-te-gadget {
+  font-family: Arial, sans-serif;
+  font-size: 14px !important;
+  color: #333 !important;
+}
+
+.goog-te-combo {
+  font-size: 14px;
+  padding: 5px;
+  border-radius: 3px;
+}
+/* about us p section of microsoft certified  */
+.microsoft-partner {
+  background: linear-gradient(
+    135deg,
+    #0a1f44,
+    #1a2d66
+  ); /* Deep Blue Gradient */
+  color: #ffffff; /* All Default Text in White */
+  padding: 30px;
+  border-radius: 14px;
+  font-size: 22px;
+  font-family: "Inter", sans-serif;
+  text-align: justify;
+  line-height: 1.8;
+  box-shadow: 0px 8px 18px rgba(0, 0, 0, 0.3);
+  max-width: 950px;
+  margin: 40px auto;
+  border-left: 6px solid #ffd700; /* Gold Accent */
+  transition: all 0.3s ease-in-out;
+}
+
+.microsoft-partner:hover {
+  transform: translateY(-5px); /* Lift effect on hover */
+  box-shadow: 0px 10px 22px rgba(0, 0, 0, 0.4);
+}
+
+.microsoft-partner p {
+  margin: 0;
+  color: #ffffff; /* Ensure all normal text remains white */
+}
+
+.microsoft-partner .highlight {
+  color: #ffd700; /* Gold Color for Highlights */
+  font-weight: 600;
+}
+
+.microsoft-partner .white-text {
+  color: #ffffff; /* Keep "We are a" in pure white */
+  font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  .microsoft-partner {
+    font-size: 18px;
+    padding: 20px;
+  }
+}
+/* value proposition area css by satyam */
+/* Import Google Font */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap");
+
+/* Section Styling */
+.value-proposition-container {
+  font-family: "Inter", sans-serif;
+  background: linear-gradient(to bottom, #0d1b2a, #1b263b);
+  text-align: center;
+  padding: 80px 20px;
+  color: white;
+}
+
+.value-proposition h2 {
+  font-size: 42px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 50px;
+  color: #00d4ff;
+}
+
+/* Grid Layout - 5 Columns */
+.proposition-container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 30px;
+  justify-content: center;
+  align-items: center;
+  max-width: 1400px;
+  margin: auto;
+}
+
+/* Modern Box Design */
+.proposition-box {
+  background: white;
+  padding: 30px;
+  min-height: 250px;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transition: all 0.4s ease-in-out;
+  margin-top: 1rem;
+}
+
+/* Hover Effects */
+.proposition-box:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  background: linear-gradient(135deg, #4284c7, #d92b2a);
+  color: white;
+}
+
+/* Ensuring text inside is visible on hover */
+.proposition-box:hover p,
+.proposition-box:hover .highlight {
+  color: white;
+}
+
+/* Highlight Important Text */
+.highlight {
+  color: #4284c7;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+/* Microsoft Logo */
+.proposition-box img {
+  width: 270px;
+  margin-top: 15px;
+  transition: transform 0.3s ease;
+  height: 5rem;
+}
+
+.proposition-box:hover img {
+  transform: scale(1.1);
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .proposition-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .proposition-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .proposition-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }

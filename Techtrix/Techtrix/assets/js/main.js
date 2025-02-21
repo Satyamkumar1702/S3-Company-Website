@@ -304,3 +304,78 @@ document.addEventListener("DOMContentLoaded", function () {
     bar.style.width = value;
   });
 });
+// submit button form on career page
+function validateForm() {
+  var email = document.getElementById("email").value;
+  var submitBtn = document.getElementById("submitBtn");
+
+  // Simple email validation check
+  if (email.trim() !== "" && email.includes("@") && email.includes(".")) {
+    submitBtn.disabled = false;
+  } else {
+    submitBtn.disabled = true;
+  }
+}
+// career form
+function openForm() {
+  document.getElementById("application-form").style.display = "block";
+}
+
+function closeForm() {
+  document.getElementById("application-form").style.display = "none";
+}
+// google translator
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement(
+    {
+      pageLanguage: "en",
+      layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+    },
+    "google_translate_element"
+  );
+}
+// contact us form response message
+document
+  .getElementById("contact-form")
+  .addEventListener("submit", function (event) {
+    event.preventDefault(); // Prevent form from actually submitting
+
+    // Display success message
+    var successAlert = document.getElementById("success-alert");
+    successAlert.style.display = "block";
+
+    // Fade out the message after 3 seconds
+    setTimeout(function () {
+      successAlert.style.opacity = "0";
+      setTimeout(() => (successAlert.style.display = "none"), 500);
+    }, 3000);
+
+    // Optionally, reset the form
+    this.reset();
+  });
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement(
+    {
+      pageLanguage: "en",
+      includedLanguages: "", // Keep this blank to include all languages
+      layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+    },
+    "google_translate_element"
+  );
+}
+
+// Store selected language in local storage to persist across pages
+function setLanguage(lang) {
+  localStorage.setItem("selectedLanguage", lang);
+  var select = document.querySelector(".goog-te-combo");
+  if (select) select.value = lang;
+}
+
+// Apply stored language when page loads
+window.onload = function () {
+  var selectedLang = localStorage.getItem("selectedLanguage");
+  if (selectedLang && document.querySelector(".goog-te-combo")) {
+    document.querySelector(".goog-te-combo").value = selectedLang;
+    document.querySelector(".goog-te-combo").dispatchEvent(new Event("change"));
+  }
+};

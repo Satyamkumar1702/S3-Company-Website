@@ -62,6 +62,9 @@
     <link rel="stylesheet" href="assets/css/style.css" />
     <!-- Responsive CSS -->
     <link rel="stylesheet" href="assets/css/responsive.css" />
+    <div class="gtranslate_wrapper"></div>
+<script>window.gtranslateSettings = {"default_language":"en","languages":["en","fr","it","es","nl","el","ru","ro","hi"],"wrapper_selector":".gtranslate_wrapper","flag_size":24,"switcher_horizontal_position":"right","switcher_vertical_position":"top"}</script>
+<script src="https://cdn.gtranslate.net/widgets/latest/dwf.js" defer></script>
   </head>
 
   <body>
@@ -74,7 +77,7 @@
     <!-- End Preloader Section -->
 
     <!-- Start Navbar Section -->
-
+    <div id="google_translate_element"></div>
     <div class="navbar-section">
       <div class="techtrix-responsive-nav">
         <div class="container">
@@ -152,8 +155,8 @@
                   </ul> -->
                 </li>
                 <li class="nav-item">
-                  <a href="#" class="nav-link"
-                    >Pages
+                  <a href="career.html" class="nav-link"
+                    >Career
                     <!-- <i class="fas fa-chevron-down"></i> -->
                   </a>
                   <!-- <ul class="dropdown-menu">
@@ -192,7 +195,7 @@
                 </li>
 
                 <li class="nav-item">
-                  <a href="#" class="nav-link"
+                  <a href="blog.html" class="nav-link"
                     >Blog
                     <!-- <i class="fas fa-chevron-down"></i> -->
                   </a>
@@ -253,6 +256,8 @@
           <div class="col-md-12">
             <div class="section-title">
               <h6 class="sub-title" style="color: #d92b2a;">Contact Us</h6>
+              <input type="hidden"
+              name="access_key" value="b5199dcf-8f95-48d8-a968-715460e51e03"/>
               <h2>Have Any Questions?</h2>
             </div>
           </div>
@@ -322,7 +327,6 @@
                         id="message"
                         cols="30"
                         rows="6"
-                        required
                         placeholder="Your Message"
                       ></textarea>
                     </div>
@@ -336,6 +340,9 @@
                   </div>
                 </div>
               </form>
+              <div id="success-alert" class="success-alert">
+                Your message has been sent successfully!
+              </div>
             </div>
           </div>
         </div>
@@ -352,13 +359,13 @@
 	  </div>
 	  <div class="row">
 		<!-- INDIA -->
-		<div class="col-lg-4 col-md-6">
+		<div class="col-lg-3 col-md-6">
 		  <div class="contact-card">
 			<i class="fas fa-map-marker-alt location-icon"></i>
 			<h5 style="color: black;">INDIA</h5>
 			<p>
 			  S3 INFOTECH PRIVATE LIMITED<br>
-			  H-49, Second Floor<br>
+			  H-49, 2nd Floor<br>
 			  SECTOR-63, NOIDA, UP - 201309
 			</p>
 			<a href="tel:+911204129713" class="contact-link">
@@ -370,7 +377,7 @@
 		  </div>
 		</div>
 		<!-- KENYA -->
-		<div class="col-lg-4 col-md-6">
+		<div class="col-lg-3 col-md-6">
 		  <div class="contact-card">
 			<i class="fas fa-map-marker-alt location-icon"></i>
 			<h5 style="color: black;">KENYA</h5>
@@ -387,7 +394,7 @@
 		  </div>
 		</div>
 		<!-- DENMARK -->
-		<div class="col-lg-4 col-md-6">
+		<div class="col-lg-3 col-md-6">
 		  <div class="contact-card">
 			<i class="fas fa-map-marker-alt location-icon"></i>
 			<h5 style="color: black;">DENMARK</h5>
@@ -406,9 +413,27 @@
 			</a>
 		  </div>
 		</div>
+    <!-- Ethiopia -->
+    <div class="col-lg-3 col-md-6">
+		  <div class="contact-card">
+			<i class="fas fa-map-marker-alt location-icon"></i>
+			<h5 style="color: black;">Ethiopia</h5>
+			<p>
+			  Simple Software Solution PLC<br>
+			  C/O 4th Floor, Elsi Building ,Infront of Arada sub city building. Arat Building - Addis Ababa
+			</p>
+			<a href="tel:+4564677090" class="contact-link">
+			  <i class="fas fa-phone-alt"></i> +45-64677090
+			</a>
+			<a href="mailto:Info@s3infotech.in" class="contact-link">
+			  <i class="fas fa-envelope"></i> Info@s3infotech.in
+			</a>
+		  </div>
+		</div>
 	  </div>
 	</div>
   </section>
+  
   <!-- End Contact Box Section -->  
   
     <!-- Start Map Section -->
@@ -507,12 +532,12 @@
 						<h3>Our Services</h3>
 					  </div>
 					  <ul class="footer-quick-links">
-						<li><a href="#">AI Integration</a></li>
-						<li><a href="#">Power Platform Development</a></li>
-						<li><a href="#">Cloud Services</a></li>
-						<li><a href="#">Social Media Marketing</a></li>
-						<li><a href="#">Web Devlopment</a></li>
-					  </ul>
+              <li><a href="services.html">AI Integration</a></li>
+              <li><a href="services.html">Power Platform Development</a></li>
+              <li><a href="services.html">Cloud Services</a></li>
+              <li><a href="services.html">Social Media Marketing</a></li>
+              <li><a href="services.html">Web Devlopment</a></li>
+            </ul>
 					</div>
 				  </div>
 				  <div class="col-lg-2 col-md-6 col-sm-6">
@@ -521,12 +546,12 @@
 						<h3>Useful Links</h3>
 					  </div>
 					  <ul class="footer-quick-links">
-						<li><a href="about.html">About Us</a></li>
-						<li><a href="portfolio.html">Case Study</a></li>
-						<li><a href="contact.html">Contact Us</a></li>
-						<li><a href="privacy-policy.html">Privacy Policy</a></li>
-						<li><a href="terms-condition.html">Terms & Conditions</a></li>
-					  </ul>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="portfolio.html">Case Study</a></li>
+              <li><a href="contact.html">Contact Us</a></li>
+              <li><a href="portfolio.html">Portfolio</a></li>
+              <li><a href="career.html">Career</a></li>
+            </ul>
 					</div>
 				  </div>
 				  <div class="col-lg-4 col-md-6 col-sm-6">
@@ -551,7 +576,7 @@
 					  <div class="footer-info-contact">
 						<i class="flaticon-placeholder"></i>
 						<h3>Address</h3>
-						<span>H-49, H-Block, Sector 63, Noida, Uttar Pradesh</span>
+						<span>H-49, 2nd Floor, Sector 63, Noida, 201309, Uttar Pradesh</span>
 					  </div>
 					</div>
 				  </div>
@@ -573,16 +598,23 @@
 				  </p>
 				</div>
 				<div class="col-lg-6 col-md-6">
-				  <ul>
+				  <!-- <ul>
 					<li><a href="terms-condition.html">Terms & Conditions</a></li>
 					<li><a href="privacy-policy.html">Privacy Policy</a></li>
-				  </ul>
+				  </ul> -->
 				</div>
 			  </div>
 			</div>
 		  </div>
 		</div>
 	  </div>
+    <div class="developer-credit">
+      <p>Developed by 
+          <a href="https://www.linkedin.com/in/satyam-kumar-1b48a5204/" target="_blank"><i class="fab fa-linkedin"></i> Satyam</a> & 
+          <a href="https://www.linkedin.com/in/upender-singh-6406b4249/" target="_blank"><i class="fab fa-linkedin"></i> Upender</a>
+      </p>
+  </div>
+  
 		  <!-- End Copy Right Section -->
 	  
 		  <!-- Start Go Top Section -->
