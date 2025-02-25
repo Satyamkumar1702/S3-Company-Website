@@ -264,86 +264,38 @@
           <div class="col-lg-10 offset-lg-1">
             <div class="contact-form">
               <p class="form-message"></p>
-              <form
-                id="contact-form"
-                class="main-form"
-                action="phpmail.php"
-                method="POST"
-              >
+              <form id="contactform" class="main-form" method="post">
                 <div class="row">
-                  <div class="col-lg-6 col-md-6">
-                    <div class="form-group">
-                      <input
-                        type="text"
-                        name="name"
-                        id="name"
-                        class="form-control"
-                        required
-                        placeholder="Your Name"
-                      />
+                    <div class="col-lg-6 col-md-12">
+                        <div class="form-group">
+                            <input type="text" name="name" id="name" class="form-control" required placeholder="Your Name" />
+                        </div>
                     </div>
-                  </div>
-                  <div class="col-lg-6 col-md-6">
-                    <div class="form-group">
-                      <input
-                        type="email"
-                        name="email"
-                        id="email"
-                        class="form-control"
-                        required
-                        placeholder="Your Email"
-                      />
+                    <div class="col-lg-6 col-md-12">
+                        <div class="form-group">
+                            <input type="email" name="email" id="email" class="form-control" required placeholder="Your Email" />
+                        </div>
                     </div>
-                  </div>
-                  <div class="col-lg-6 col-md-6">
-                    <div class="form-group">
-                      <input
-                        type="text"
-                        name="phone"
-                        id="phone"
-                        required
-                        class="form-control"
-                        placeholder="Your Phone"
-                      />
+                    <div class="col-lg-6 col-md-12">
+                        <div class="form-group">
+                            <input type="text" name="phone" id="phone" class="form-control" required placeholder="Your Phone" />
+                        </div>
                     </div>
-                  </div>
-                  <div class="col-lg-6 col-md-6">
-                    <div class="form-group">
-                      <input
-                        type="text"
-                        name="subject"
-                        id="subject"
-                        class="form-control"
-                        required
-                        placeholder="Your Subject"
-                      />
+                    <div class="col-lg-6 col-md-12">
+                        <div class="form-group">
+                            <input type="text" name="subject" id="subject" class="form-control" required placeholder="Your Subject" />
+                        </div>
                     </div>
-                  </div>
-                  <div class="col-lg-12 col-md-12">
-                    <div class="form-group">
-                      <textarea
-                        name="message"
-                        class="form-control"
-                        id="message"
-                        cols="30"
-                        rows="6"
-                        placeholder="Your Message"
-                      ></textarea>
+                    <div class="col-lg-12 col-md-12">
+                        <div class="form-group">
+                            <textarea name="message" id="message" class="form-control" cols="30" rows="6" required placeholder="Your Message"></textarea>
+                        </div>
                     </div>
-                  </div>
-                  <div class="col-lg-12 col-md-12">
-                    <div class="contact-btn">
-                      <button type="submit" class="default-btn submit-btn">
-                        Send Message <span></span>
-                      </button>
+                    <div class="col-lg-12 col-md-12 text-center">
+                        <button type="submit" class="btn btn-primary w-100">Send Message</button>
                     </div>
-                  </div>
                 </div>
-              </form>
-              <div id="success-alert" class="success-alert">
-                Your message has been sent successfully!
-              </div>
-            </div>
+            </form>
           </div>
         </div>
       </div>
@@ -652,6 +604,46 @@
 		  <script src="assets/js/main.js"></script>
 		  <!-- Font Awesome (for icons) -->
   <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <script>
+document.addEventListener("DOMContentLoaded", function () {
+    let form = document.getElementById("contactform");
+    let successAlert = document.querySelector(".form-message");
+
+    if (!form) {
+        console.error("Form not found!");
+        return;
+    }
+
+    form.addEventListener("submit", function (event) {
+        event.preventDefault(); // Stop form submission
+
+        let formData = {
+            name: document.getElementById("name")?.value.trim() || "",
+            email: document.getElementById("email")?.value.trim() || "",
+            phone: document.getElementById("phone")?.value.trim() || "",
+            subject: document.getElementById("subject")?.value.trim() || "",
+            message: document.getElementById("message")?.value.trim() || ""
+        };
+
+        console.log("Form Data:", formData);
+
+        if (successAlert) {
+            successAlert.style.display = "block";
+            successAlert.innerText = "Your message has been sent successfully!";
+            successAlert.classList.add("success");
+
+            setTimeout(() => {
+                successAlert.style.display = "none";
+            }, 3000);
+        }
+
+        form.reset();
+    });
+});
+</script>
+
+  
+  
 		</body>
 	  </html>
 	  

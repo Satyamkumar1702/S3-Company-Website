@@ -335,24 +335,24 @@ function googleTranslateElementInit() {
   );
 }
 // contact us form response message
-document
-  .getElementById("contact-form")
-  .addEventListener("submit", function (event) {
-    event.preventDefault(); // Prevent form from actually submitting
+// document
+//   .getElementById("contact-form")
+//   .addEventListener("submit", function (event) {
+//     event.preventDefault(); // Prevent form from actually submitting
 
-    // Display success message
-    var successAlert = document.getElementById("success-alert");
-    successAlert.style.display = "block";
+//     // Display success message
+//     var successAlert = document.getElementById("success-alert");
+//     successAlert.style.display = "block";
 
-    // Fade out the message after 3 seconds
-    setTimeout(function () {
-      successAlert.style.opacity = "0";
-      setTimeout(() => (successAlert.style.display = "none"), 500);
-    }, 3000);
+//     // Fade out the message after 3 seconds
+//     setTimeout(function () {
+//       successAlert.style.opacity = "0";
+//       setTimeout(() => (successAlert.style.display = "none"), 500);
+//     }, 3000);
 
-    // Optionally, reset the form
-    this.reset();
-  });
+//     // Optionally, reset the form
+//     this.reset();
+//   });
 function googleTranslateElementInit() {
   new google.translate.TranslateElement(
     {

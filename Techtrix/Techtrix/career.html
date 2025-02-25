@@ -332,7 +332,7 @@
 
 <!-- Application Form Section -->
 <div id="application-form" class="form-popup">
-  <form id="careerForm" class="form-container" action="career.php" method="POST" enctype="multipart/form-data">
+  <form id="careerForm" class="form-container" action="" method="POST" enctype="multipart/form-data">
       
       <h2>Apply for a Job</h2>
 
@@ -556,6 +556,75 @@
 	  <!-- Main JS -->
 	  <script src="assets/js/main.js"></script>
 	  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <script>
+      document.getElementById("careerForm").addEventListener("submit", async function(event) {
+          event.preventDefault();
+  
+          const submitBtn = document.getElementById("submitBtn");
+          submitBtn.disabled = true;
+          submitBtn.innerText = "Submitting...";
+  
+          const name = document.getElementById("name").value.trim();
+          const email = document.getElementById("email").value.trim();
+          const phone = document.getElementById("phone").value.trim();
+          const role = document.getElementById("role").value;
+          const message = document.getElementById("message").value.trim();
+          const resumeInput = document.getElementById("resume");
+          const resumeFile = resumeInput.files[0];
+  
+          // Validation
+          if (!name || !email || !resumeFile) {
+              alert("Please fill in all required fields.");
+              submitBtn.disabled = false;
+              submitBtn.innerText = "Submit Application";
+              return;
+          }
+  
+        
+  
+          // Resume file validation (Only PDF or DOCX)
+          const allowedExtensions = /(\.pdf|\.docx)$/i;
+          if (!allowedExtensions.test(resumeFile.name)) {
+              alert("Only PDF and DOCX files are allowed for resume upload.");
+              submitBtn.disabled = false;
+              submitBtn.innerText = "Submit Application";
+              return;
+          }
+  
+          const formData = new FormData();
+          formData.append("name", name);
+          formData.append("email", email);
+          formData.append("phone", phone);
+          formData.append("role", role);
+          formData.append("message", message);
+          formData.append("resume", resumeFile);
+  
+          try {
+              const response = await fetch("http://localhost:3000/api/career", {
+                  method: "POST",
+                  body: formData,
+              });
+  
+              const result = await response.json();
+              console.log("Response Data:", result); // Log the response
+  
+              if (result.success) {
+                  window.location.href = "thank-you.html"; // Redirect on success
+              } else {
+                  alert("Error: " + result.message);
+              }
+          } catch (error) {
+              console.error("Error submitting form:", error);
+              alert("Failed to submit application. Please try again.");
+          } finally {
+              submitBtn.disabled = false;
+              submitBtn.innerText = "Submit Application";
+          }
+      });
+  </script>
+  
+  
+  
 	</body>
   </html>
   
